@@ -74,7 +74,7 @@ export default {
   methods: {
     parse() {
       var vue = this;
-        this.papaparse.parse('https://raw.githubusercontent.com/cullerth/tftf_webapp/main/tftf_data_all.csv', {
+        this.papaparse.parse('https://raw.githubusercontent.com/cullerth/tftf-webapp/main/src/data/tftf_data_all.csv', {
         header: true,
         download: true, 
         complete: function(results) {

@@ -1,24 +1,7 @@
-# 'the thing from the future' vue.js web-app
+# 'The Thing From the Future' vue.js web app
 
-## Project setup
-```
-npm install
-```
+The Thing From the Future is an imagination game meant to spur creative and critical thinking. To play the game, you draw a set of cards that prompt you to create an object from an alternative future.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Based on [the original card game by Situation Lab](https://situationlab.org/project/the-thing-from-the-future/). 
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Visit https://cullerth.github.io/tftf-webapp/ to play.
