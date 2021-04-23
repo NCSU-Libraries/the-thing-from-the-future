@@ -1,15 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <img alt="The Thing From the Future logo" src="./assets/tftf_logo.jpeg">
+    <tftf msg="Wicked Problems, Wolfpack Solutions Edition"/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import tftf from './components/tftf.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    tftf
   }
 }
 </script>
@@ -20,7 +22,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #444;
   margin-top: 60px;
 }
 </style>
