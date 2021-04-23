@@ -1,4 +1,4 @@
-# hello-world
+# 'the thing from the future' vue.js web-app
 
 ## Project setup
 ```
