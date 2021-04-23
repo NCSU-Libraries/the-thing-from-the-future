@@ -4,6 +4,7 @@ Growth,a future in which “progress” has continued,Arc
 Collapse,a future in which society as we know it has come apart,Arc
 Discipline,a future in which order is deliberately coordinated or imposed,Arc
 Transformation,a future in which a profound historical evolution has occurred,Arc
+*something else*,,Terrain
 agriculture,,Terrain
 the brain,,Terrain
 childhood,,Terrain
@@ -61,6 +62,7 @@ work,,Terrain
 zombies,,Terrain
 the zoo,,Terrain
 wildcard,topic or location of your choice,Terrain
+*thing*,,Object
 advertisement,,Object
 artwork,,Object
 beverage,,Object
