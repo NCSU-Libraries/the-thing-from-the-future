@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1><i>{{ msg }}</i></h1>
+    <h1>{{ msg }}</h1>
     <p>
       The Thing From the Future is an imagination game meant to spur creative and critical thinking.<br>
       To play the game, you draw a set of cards that prompt you to create an object from an alternative future.
@@ -9,19 +9,16 @@
 
   <div class="wrapper">
     <div class="box a">
-      <h1> ARC </h1>
-      <br>
-      <h2>{{ arccards }}</h2>
+      <p> ARC </p>
+      <h4>{{ arccards }}</h4>
     </div>
     <div class="box b">
-      <h1> OBJECT </h1>
-      <br>
-      <h2> there is a <br><b>{{ objectcards[0] }}</b></h2>
+      <p> OBJECT </p>
+      <h4> there is a <br><b>{{ objectcards[0] }}</b></h4>
     </div>
     <div class="box c">
-      <h1> TERRAIN </h1>
-      <br>
-      <h2> related to <br><b>{{ terraincards[0] }}</b>.</h2>
+      <p> TERRAIN </p>
+      <h4> related to <br><b>{{ terraincards[0] }}</b>.</h4>
     </div>
     
 
@@ -29,13 +26,20 @@
   </div>
   
   <div class="app">
-    <h3><i> What is it? </i></h3>
-    <br>
     <p><button v-on:click="deal_cards()" class="btn btn-primary">Deal Cards</button></p>
     <br>
-    <p> About the Card Decks: </p>
+    <h2><i> What is it? </i></h2>
+    <p>
+      Use *this template*(link forthcoming) to respond to the prompt. 
+      <br>
+      To see a demo of how to play the game, please visit (link to video forthcoming).
+    </p>  
+    <h3>  </h3>
+    <h3> About the card decks: </h3>
       <ul class="list-group">
         <li v-for="(deck, index) in card_decks" :key="index">{{deck.desc}}</li>
+        <br>
+        <li><i> Drawn a wildcard? Fill in your own idea! </i></li>
       </ul>
       <br>
   </div>
@@ -122,24 +126,24 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #42b983;
-}
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
   background-color: #fff;
   color: rgb(202, 189, 189);
-  max-width: 825px;
+  max-width: 300px;
+  max-height: 800px;
   margin: 0 auto; 
   padding: 25px; 
-  column-gap: 15px; 
+  column-gap: 15px;
+  row-gap: 15px; 
 }
 .box {
   background-color: #fff;
-  color: #444;
-  border-color: rgb(10, 10, 10);
-  border-radius: 25px;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  border-radius: 23px;
   border-width: 10px;
   padding: 25px;
   font-size: 150%;
@@ -148,4 +152,7 @@ a {
   /* outline: solid; 
   outline-color: black; */
 }
+.wrapper .box:nth-child(1) {    background:#8ec741;           }
+.wrapper .box:nth-child(2) {    background:#00bef3;            }
+.wrapper .box:nth-child(3) {    background:#f36d7d;         }
 </style>

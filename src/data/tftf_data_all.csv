@@ -56,12 +56,12 @@ theatre,,Terrain
 travel,,Terrain
 war,,Terrain
 water,,Terrain
-weath,,Terrain
+wealth,,Terrain
 women,,Terrain
 work,,Terrain
 zombies,,Terrain
 the zoo,,Terrain
-wildcard,topic or location of your choice,Terrain
+*wildcard*,topic or location of your choice,Terrain
 *thing*,,Object
 advertisement,,Object
 artwork,,Object
@@ -119,4 +119,4 @@ toy,,Object
 vehicle,,Object
 video,,Object
 weapon,,Object
-wildcard,artifact of your own choice,Object
+*wildcard*,artifact of your own choice,Object

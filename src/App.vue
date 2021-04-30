@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <img alt="The Thing From the Future logo" src="./assets/tftf_logo.jpeg">
+    <br>
+    <br>
     <tftf msg="Wicked Problems, Wolfpack Solutions Edition"/>
   </div>
 </template>
@@ -22,7 +24,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #444;
+  color: #262626;
   margin-top: 60px;
 }
 </style>
