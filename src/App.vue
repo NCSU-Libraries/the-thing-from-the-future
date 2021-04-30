@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="The Thing From the Future logo" src="./assets/tftf_logo.jpeg">
+    <img  alt="The Thing From the Future logo" src="./assets/tftf_logo.jpeg" width="400">
     <br>
     <br>
     <tftf msg="Wicked Problems, Wolfpack Solutions Edition"/>

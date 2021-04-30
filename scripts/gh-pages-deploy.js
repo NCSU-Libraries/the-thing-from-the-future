@@ -24,8 +24,6 @@ const fs = require("fs");
   }
 })();
 
-https://blog.logrocket.com/build-deploy-vue-js-app-github-pages/
-
 // "scripts": {
 //   "deploy": "node scripts/gh-pages-deploy.js"
 //  } https://blog.logrocket.com/build-deploy-vue-js-app-github-pages/
