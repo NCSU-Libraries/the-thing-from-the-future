@@ -4,4 +4,4 @@ The Thing From the Future is an imagination game meant to spur creative and crit
 
 Based on [the original card game by Situation Lab](https://situationlab.org/project/the-thing-from-the-future/). 
 
-## Visit https://ncsu-libraries.github.io/tftf-webapp/ to play.
+## Visit https://ncsu-libraries.github.io/the-thing-from-the-future/ to play.
