@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/tftf-webapp/'
+  publicPath: '/the-thing-from-the-future/'
 }
