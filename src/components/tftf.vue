@@ -17,11 +17,11 @@
     </div>
     <div class="box b">
       <p> OBJECT </p>
-      <h4> there is a <br><b>{{ objectcards[0] }}</b></h4>
+      <h4> there is a <br><em>{{ objectcards[0] }}</em></h4>
     </div>
     <div class="box c">
       <p> TERRAIN </p>
-      <h4> related to <br><b>{{ terraincards[0] }}</b>.</h4>
+      <h4> related to <br><em>{{ terraincards[0] }}</em>.</h4>
     </div>
     
 
