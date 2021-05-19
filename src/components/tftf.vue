@@ -1,6 +1,9 @@
 <template>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
   <div>
-    <h1>{{ msg }}</h1>
+    <h2>{{ msg }}</h2>
     <p>
       The Thing From the Future is an imagination game meant to spur creative and critical thinking.<br>
       To play the game, you draw a set of cards that prompt you to create an object from an alternative future.
@@ -26,6 +29,7 @@
   </div>
   
   <div class="app">
+    <br>
     <p><button v-on:click="deal_cards()" class="btn btn-primary">Deal Cards</button></p>
     <br>
     <h2><i> What is it? </i></h2>
@@ -116,43 +120,74 @@ export default {
 
 <style scoped>
 h3 {
-  margin: 40px 0 0;
+    margin: 40px 0 0;
 }
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 li {
-  display: inline-block;
-  margin: 0 10px;
+    display: inline-block;
+    margin: 0 10px;
 }
-.wrapper {
-  display: grid;
-  grid-template-rows: repeat(3, minmax(0, 1fr));
-  background-color: #fff;
-  color: rgb(202, 189, 189);
-  max-width: 300px;
-  max-height: 800px;
-  margin: 0 auto; 
-  padding: 25px; 
-  column-gap: 15px;
-  row-gap: 15px; 
+
+@media screen and (min-width: 601px){
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));;
+    background-color: #fff;
+    color: rgb(202, 189, 189);
+    max-width: 800px;
+    max-height: 300px;
+    margin: 0 auto; 
+    padding: 25px; 
+    column-gap: 15px;
+    row-gap: 15px; 
+  }
+  .box {
+    background-color: #fff;
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-radius: 23px;
+    border-width: 10px;
+    padding: 25px;
+    font-size: 150%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    }
+  .wrapper .box:nth-child(1) {    background:#8ec741;           }
+  .wrapper .box:nth-child(2) {    background:#00bef3;            }
+  .wrapper .box:nth-child(3) {    background:#f36d7d;         }
 }
-.box {
-  background-color: #fff;
-  color: black;
-  border-style: solid;
-  border-color: black;
-  border-radius: 23px;
-  border-width: 10px;
-  padding: 25px;
-  font-size: 150%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  /* outline: solid; 
-  outline-color: black; */
+
+@media screen and (max-width: 600px){
+  .wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    background-color: #fff;
+    color: rgb(202, 189, 189);
+    max-width: 300px;
+    max-height: 800px;
+    margin: 0 auto; 
+    padding: 25px; 
+    column-gap: 15px;
+    row-gap: 15px; 
+  }
+  .box {
+    background-color: #fff;
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-radius: 23px;
+    border-width: 10px;
+    padding: 25px;
+    font-size: 150%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+  .wrapper .box:nth-child(1) {    background:#8ec741;           }
+  .wrapper .box:nth-child(2) {    background:#00bef3;            }
+  .wrapper .box:nth-child(3) {    background:#f36d7d;         }
 }
-.wrapper .box:nth-child(1) {    background:#8ec741;           }
-.wrapper .box:nth-child(2) {    background:#00bef3;            }
-.wrapper .box:nth-child(3) {    background:#f36d7d;         }
 </style>
