@@ -50,7 +50,7 @@
 
   <div>
     <p>
-      Made by <a href="https://www.lib.ncsu.edu/spaces/innovation-studio">the Innovation Studio at NCSU Libraries</a><br>
+      Made by <a href="https://www.lib.ncsu.edu/spaces/innovation-studio">the Innovation Studio at NC State University Libraries</a><br>
       Based on <a href="http://situationlab.org/project/the-thing-from-the-future/">TFTF by Situation Lab</a><br>
       2021 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA</a>
     </p>
