@@ -36,7 +36,6 @@
     <p>
       Use <a href="https://docs.google.com/presentation/d/1hrDdq9oPwBwvCF8iQOo9eoNuHazHdvGylMOWEYWZhFM/edit?usp=sharing">this template</a> to respond to the prompt. 
       <br>
-      To see a demo of how to play the game, please visit (*link to video walkthrough forthcoming*).
     </p>  
     <h3>  </h3>
     <h3> About the card decks: </h3>

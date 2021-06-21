@@ -1,10 +1,9 @@
 Title,Description,Deck
-WPWS prompt,"In the year 2121, in a future you would like to live in,",Arc
+WPWS prompt,"In the year 2100, in a future you would like to live in,",Arc
 Growth,a future in which “progress” has continued,Arc
 Collapse,a future in which society as we know it has come apart,Arc
 Discipline,a future in which order is deliberately coordinated or imposed,Arc
 Transformation,a future in which a profound historical evolution has occurred,Arc
-something else,,Terrain
 agriculture,,Terrain
 the brain,,Terrain
 childhood,,Terrain
@@ -56,24 +55,25 @@ theatre,,Terrain
 travel,,Terrain
 war,,Terrain
 water,,Terrain
-wealth,,Terrain
-women,,Terrain
+weath,,Terrain
 work,,Terrain
 zombies,,Terrain
 the zoo,,Terrain
-*wildcard*,topic or location of your choice,Terrain
-thing,,Object
+wildcard,topic or location of your choice,Terrain
 advertisement,,Object
 artwork,,Object
 beverage,,Object
+blanket,,Object
 book,,Object
 bottle,,Object
 box,,Object
 brochure,,Object
 building,,Object
 candy,,Object
+carpet,,Object
 clothing,,Object
 corporation,,Object
+curtains,,Object
 device,,Object
 document,,Object
 event,,Object
@@ -81,10 +81,12 @@ festival,,Object
 flag,,Object
 game,,Object
 gift,,Object
+hat,,Object
 headline,,Object
 implant,,Object
 instrument,,Object
-jewellery,,Object
+jacket,,Object
+jewelry,,Object
 kit,,Object
 law,,Object
 logo,,Object
@@ -93,7 +95,10 @@ machine,,Object
 magazine cover,,Object
 map,,Object
 mask,,Object
+military uniform,,Object
 monument,,Object
+overalls,,Object
+pants,,Object
 passport,,Object
 pill,,Object
 plant,,Object
@@ -102,13 +107,21 @@ poster,,Object
 product,,Object
 prosthetic,,Object
 public service announcement,,Object
+raincoat,,Object
 relic,,Object
 ritual,,Object
+rug,,Object
+scarf,,Object
+scrubs,,Object
+shirt,,Object
+shoes,,Object
 show,,Object
 slogan,,Object
 snack,,Object
+socks,,Object
 song,,Object
 souvenir,,Object
+spacesuit,,Object
 statue,,Object
 sticker,,Object
 symbol,,Object
@@ -116,7 +129,53 @@ t-shirt,,Object
 tattoo,,Object
 tool,,Object
 toy,,Object
+underwear,,Object
+uniform,,Object
 vehicle,,Object
 video,,Object
 weapon,,Object
-*wildcard*,artifact of your own choice,Object
+wildcard,artifact of your own choice,Object
+work uniform,,Object
+Italy,wpws,Terrain
+face masks,wpws,Object
+agricultural system,wpws,Terrain
+pandemic,wpws,Terrain
+technology,wpws,Terrain
+climate change,wpws,Terrain
+globalization,wpws,Terrain
+North Carolina,wpws,Terrain
+ocean,wpws,Terrain
+mountains,wpws,Terrain
+North America,wpws,Terrain
+Mexico,wpws,Terrain
+Central America,wpws,Terrain
+Cherokee Nation,wpws,Terrain
+the Outer Banks,wpws,Terrain
+Charlanta,wpws,Terrain
+Piedmont Region,wpws,Terrain
+Ghana,wpws,Terrain
+Madagascar,wpws,Terrain
+tourism,wpws,Terrain
+transportation,wpws,Terrain
+telecommunication,wpws,Terrain
+suburb,wpws,Terrain
+population,wpws,Terrain
+city,wpws,Terrain
+atmosphere,wpws,Terrain
+swamp lands,wpws,Terrain
+Africa,wpws,Terrain
+coal mine,wpws,Terrain
+oil field,wpws,Terrain
+urban heat island,wpws,Terrain
+insect habitat,wpws,Terrain
+bee hive,wpws,Terrain
+small town,wpws,Terrain
+grassland,wpws,Terrain
+tool,wpws,Object
+spear,wpws,Object
+sponge,wpws,Object
+laboratory,wpws,Terrain
+university,wpws,Terrain
+fertilizer,wpws,Object
+fossel fuel,wpws,Object
+International Space Station,wpws,Terrain
