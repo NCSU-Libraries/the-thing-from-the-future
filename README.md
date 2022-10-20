@@ -8,7 +8,7 @@ Based on [the original card game by Situation Lab](https://situationlab.org/proj
 
 ## Learn more about the development of the project [at this link](https://drive.google.com/file/d/1q4VBmOqpjpJMK5g2cAwZ-8lK5gFqxUno/view?usp=sharing). 
 
-This version was used in the 2020 NCSU first-year and trasfer student seminar "Wicked Problems, Wolfpack Solutions". Additional versions of the game for other courses can be found below: 
+This version was used in the 2020 first-year and transfer student seminar ["Wicked Problems, Wolfpack Solutions"](https://wolfpacksolutions.ncsu.edu/) at NCSU. Additional versions of the game for other courses can be found below: 
 * [Women's, Gender, and Sexuality Studies (WG 350)](https://ncsu-libraries.github.io/tftf-wgs350/)
 * [Advanced Graphic Design Stuido (GD 400)](https://ncsu-libraries.github.io/tftf-gd400/)
 * [Filming in a Time of Emergency: Socio-Environmental Crisis and Alternative Futures Through Film (ENG 492)](https://ncsu-libraries.github.io/tftf-ENG-492/)
