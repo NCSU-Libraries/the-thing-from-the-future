@@ -6,7 +6,7 @@ Based on [the original card game by Situation Lab](https://situationlab.org/proj
 
 ## Visit https://ncsu-libraries.github.io/the-thing-from-the-future/ to play.
 
-## Learn more about the development of the project [at this link] (https://drive.google.com/file/d/1q4VBmOqpjpJMK5g2cAwZ-8lK5gFqxUno/view?usp=sharing). 
+## Learn more about the development of the project [at this link](https://drive.google.com/file/d/1q4VBmOqpjpJMK5g2cAwZ-8lK5gFqxUno/view?usp=sharing). 
 
 This version was used in the 2020 NCSU first-year and trasfer student seminar "Wicked Problems, Wolfpack Solutions". Additional versions of the game for other courses can be found below: 
 * [Women's, Gender, and Sexuality Studies (WG 350)](https://ncsu-libraries.github.io/tftf-wgs350/)
