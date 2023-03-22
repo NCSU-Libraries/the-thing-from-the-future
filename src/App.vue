@@ -8,7 +8,7 @@
   <div id="app">
     <!-- <img  alt="The Thing From the Future logo" src="./assets/tftf_logo.jpeg" width="400"> -->
     <h1> The Thing From the Future </h1>
-    <tftf msg="Wicked Problems, Wolfpack Solutions Edition"/>
+    <tftf/>
   </div>
 </template>
 

@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <div>
-    <h2>{{ msg }}</h2>
+    <h2 style="text-transform: capitalize;">{{ msg }}</h2>
     <p>
       The Thing From the Future is an imagination game meant to spur creative and critical thinking.<br>
       To play the game, you draw a set of cards that prompt you to create an object from an alternative future.
@@ -61,15 +61,12 @@
 import all_decks from '../data/all_decks.json';
 export default {
   name: 'tftf',
-  props: {
-    msg: String
-  },
-  inject:['papaparse'],
   data() {
     return {
         arccards: [],
         objectcards: [],
         terraincards: [],
+        msg: "Wicked Problems, Wolfpack Solutions Edition",
         card_decks: [ 
           {deck: "Arc", desc: "ARC outlines the type of future world that the “thing” comes from, and how far away it is from today."}, // There are four types of Arc, each an umbrella for countless possible scenarios: growth, collapse, discipline, transformation.
           {deck: "Object" , desc: "OBJECT is the focus for your imagination: a specific cultural artifact that reveals something about how this future is different from today."},
@@ -88,6 +85,9 @@ export default {
       const urlDeck = urlParams.get('deck');
       var deck = urlDeck && Object.keys(all_decks).indexOf(urlDeck) > -1 ? urlDeck : 'all';
       console.log(deck)
+      if (deck != 'all') {
+        this.msg = deck.replaceAll('-', ' ')
+      }
       vue.cards = all_decks[deck];
         var objectcards = []
         var terraincards = []
