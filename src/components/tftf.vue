@@ -13,15 +13,15 @@
   <div class="wrapper">
     <div class="box a">
       <p> ARC </p>
-      <h4>{{ arccards[0] }}</h4>
+      <h3>{{ arccards[0] }}</h3>
     </div>
     <div class="box b">
       <p> OBJECT </p>
-      <h4> there is a <br><em>{{ objectcards[0] }}</em></h4>
+      <h3> there is a <br><em>{{ objectcards[0] }}</em></h3>
     </div>
     <div class="box c">
       <p> TERRAIN </p>
-      <h4> related to <br><em>{{ terraincards[0] }}</em>.</h4>
+      <h3> related to <br><em>{{ terraincards[0] }}</em>.</h3>
     </div>
     
 
@@ -37,8 +37,8 @@
       Use <a href="https://docs.google.com/presentation/d/1VoBZTmjG2UpjqwyJLg8GF4JeLEkhmag5Ru-uG4kXxes/copy">this template</a> to respond to the prompt. 
       <br>
     </p>  
-    <h3>  </h3>
-    <h3> About the card decks: </h3>
+    <br/>
+    <h2> About the card decks: </h2>
       <ul class="list-group">
         <li v-for="(deck, index) in card_decks" :key="index">{{deck.desc}}</li>
         <br>
@@ -118,7 +118,8 @@ export default {
 </script>
 
 <style scoped>
-h3 {
+
+h4 {
     margin: 40px 0 0;
 }
 ul {
@@ -130,6 +131,18 @@ li {
     margin: 0 10px;
 }
 
+.box h3 {
+  font-size: 1.5rem;
+}
+
+a {
+ color: #004C9E;
+}
+
+.btn-primary {
+  background-color: #004C9E;
+  border-color: #004C9E;
+}
 @media screen and (min-width: 601px){
   .wrapper {
     display: grid;
