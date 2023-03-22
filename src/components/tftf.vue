@@ -13,7 +13,7 @@
   <div class="wrapper">
     <div class="box a">
       <p> ARC </p>
-      <h4>{{ arccards }}</h4>
+      <h4>{{ arccards[0] }}</h4>
     </div>
     <div class="box b">
       <p> OBJECT </p>
@@ -56,7 +56,9 @@
   </div>
 </template>
 
+
 <script>
+import spreadsheet from '../data/tftf_data_all.csv';
 export default {
   name: 'tftf',
   props: {
@@ -81,25 +83,25 @@ export default {
   methods: {
     parse() {
       var vue = this;
-        this.papaparse.parse('https://raw.githubusercontent.com/NCSU-Libraries/the-thing-from-the-future/main/src/data/tftf_data_all.csv', {
+        this.papaparse.parse(spreadsheet, {
         header: true,
-        download: true, 
         complete: function(results) {
           console.log('parsing done', results)
           vue.cards = results['data']
 
-          var arccards = vue.cards[0]['Description']
           var objectcards = []
           var terraincards = []
-          // var arccards = []
+          var arccards = []
           vue.cards.forEach(function(card) {
             if (card['Deck'] == 'Object') {
               objectcards.push(card['Title'])
             } else if (card['Deck'] == 'Terrain') {
               terraincards.push(card['Title'])
-            } //else if (card['Deck'] == 'Arc') {
-            //   arccards.push('In a "' + card['Title'] + '" future,' + card['Description'] + ", ")
-            // } 
+            } else if (card['Deck'] == 'Arc') {
+               var arctext = 'In a "' + card['Title'] + '" future, ' + card['Description'];
+               arctext += arctext.slice(-1)[0] != ',' ? ',' : '';
+               arccards.push(arctext)
+            }
           });
 
           vue.arccards = arccards;
@@ -112,6 +114,7 @@ export default {
     deal_cards() {
       this.objectcards[0] = this.objectcards[Math.floor(Math.random() * this.objectcards.length)]
       this.terraincards[0] = this.terraincards[Math.floor(Math.random() * this.terraincards.length)]
+      this.arccards[0] = this.arccards[Math.floor(Math.random() * this.arccards.length)]
     }
   }
 }
