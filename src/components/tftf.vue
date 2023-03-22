@@ -13,15 +13,15 @@
   <div class="wrapper">
     <div class="box a">
       <p> ARC </p>
-      <h3>{{ arccards[0] }}</h3>
+      <h3>{{ current['arc'] }}</h3>
     </div>
     <div class="box b">
       <p> OBJECT </p>
-      <h3> there is a <br><em>{{ objectcards[0] }}</em></h3>
+      <h3> there is a <br><em>{{ current['object'] }}</em></h3>
     </div>
     <div class="box c">
       <p> TERRAIN </p>
-      <h3> related to <br><em>{{ terraincards[0] }}</em>.</h3>
+      <h3> related to <br><em>{{ current['terrain'] }}</em>.</h3>
     </div>
     
 
@@ -66,6 +66,7 @@ export default {
         arccards: [],
         objectcards: [],
         terraincards: [],
+        current: {'arc': '', 'terrain': '', 'object': ''},
         msg: "Wicked Problems, Wolfpack Solutions Edition",
         card_decks: [ 
           {deck: "Arc", desc: "ARC outlines the type of future world that the “thing” comes from, and how far away it is from today."}, // There are four types of Arc, each an umbrella for countless possible scenarios: growth, collapse, discipline, transformation.
@@ -107,11 +108,13 @@ export default {
         vue.arccards = arccards;
         vue.objectcards = objectcards;
         vue.terraincards = terraincards;
+        this.deal_cards();
+
     },
     deal_cards() {
-      this.objectcards[0] = this.objectcards[Math.floor(Math.random() * this.objectcards.length)]
-      this.terraincards[0] = this.terraincards[Math.floor(Math.random() * this.terraincards.length)]
-      this.arccards[0] = this.arccards[Math.floor(Math.random() * this.arccards.length)]
+      this.current['object'] = this.objectcards[Math.floor(Math.random() * this.objectcards.length)]
+      this.current['terrain'] = this.terraincards[Math.floor(Math.random() * this.terraincards.length)]
+      this.current['arc'] = this.arccards[Math.floor(Math.random() * this.arccards.length)]
     }
   }
 }
