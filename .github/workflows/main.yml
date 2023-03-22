@@ -21,9 +21,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
+      - name: run python script
+        run: python convertdata.py
       - name: install
         run: npm install && npm run build
-        
       - name: commit files
         run: |
           git config --local user.email "action@github.com"

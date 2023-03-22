@@ -58,7 +58,7 @@
 
 
 <script>
-import spreadsheet from '../data/tftf_data_all.csv';
+import all_decks from '../data/all_decks.json';
 export default {
   name: 'tftf',
   props: {
@@ -83,33 +83,30 @@ export default {
   methods: {
     parse() {
       var vue = this;
-        this.papaparse.parse(spreadsheet, {
-        header: true,
-        complete: function(results) {
-          console.log('parsing done', results)
-          vue.cards = results['data']
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const urlDeck = urlParams.get('deck');
+      var deck = urlDeck && Object.keys(all_decks).indexOf(urlDeck) > -1 ? urlDeck : 'all';
+      console.log(deck)
+      vue.cards = all_decks[deck];
+        var objectcards = []
+        var terraincards = []
+        var arccards = []
+        vue.cards.forEach(function(card) {
+          if (card['Deck'] == 'Object') {
+            objectcards.push(card['Title'])
+          } else if (card['Deck'] == 'Terrain') {
+            terraincards.push(card['Title'])
+          } else if (card['Deck'] == 'Arc') {
+             var arctext = 'In a "' + card['Title'] + '" future, ' + card['Description'];
+             arctext += arctext.slice(-1)[0] != ',' ? ',' : '';
+             arccards.push(arctext)
+          }
+        });
 
-          var objectcards = []
-          var terraincards = []
-          var arccards = []
-          vue.cards.forEach(function(card) {
-            if (card['Deck'] == 'Object') {
-              objectcards.push(card['Title'])
-            } else if (card['Deck'] == 'Terrain') {
-              terraincards.push(card['Title'])
-            } else if (card['Deck'] == 'Arc') {
-               var arctext = 'In a "' + card['Title'] + '" future, ' + card['Description'];
-               arctext += arctext.slice(-1)[0] != ',' ? ',' : '';
-               arccards.push(arctext)
-            }
-          });
-
-          vue.arccards = arccards;
-          vue.objectcards = objectcards;
-          vue.terraincards = terraincards;
-
-        }
-      });
+        vue.arccards = arccards;
+        vue.objectcards = objectcards;
+        vue.terraincards = terraincards;
     },
     deal_cards() {
       this.objectcards[0] = this.objectcards[Math.floor(Math.random() * this.objectcards.length)]
