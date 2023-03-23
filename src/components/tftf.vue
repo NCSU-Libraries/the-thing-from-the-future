@@ -67,7 +67,7 @@ export default {
         objectcards: [],
         terraincards: [],
         current: {'arc': '', 'terrain': '', 'object': ''},
-        msg: "Wicked Problems, Wolfpack Solutions Edition",
+        msg: "",
         card_decks: [ 
           {deck: "Arc", desc: "ARC outlines the type of future world that the “thing” comes from, and how far away it is from today."}, // There are four types of Arc, each an umbrella for countless possible scenarios: growth, collapse, discipline, transformation.
           {deck: "Object" , desc: "OBJECT is the focus for your imagination: a specific cultural artifact that reveals something about how this future is different from today."},
@@ -86,10 +86,8 @@ export default {
       const urlDeck = urlParams.get('deck');
       var deck = urlDeck && Object.keys(all_decks).indexOf(urlDeck) > -1 ? urlDeck : 'all';
       console.log(deck)
-      if (deck != 'all') {
-        this.msg = deck.replaceAll('-', ' ')
-      }
-      vue.cards = all_decks[deck];
+      this.msg = deck['title'].replaceAll('-', ' ')
+      vue.cards = all_decks[deck]['rows'];
         var objectcards = []
         var terraincards = []
         var arccards = []
