@@ -31,7 +31,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git config pull.rebase false
           git add src/data
-          git commit -m "update data folder"
+          git commit -m "update data folder" || echo "No changes to commit"
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
@@ -43,7 +43,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git config pull.rebase false
           git --work-tree dist add --all
-          git --work-tree dist commit -m "update gh-pages site"
+          git --work-tree dist commit -m "update gh-pages site" || echo "No changes to commit"
       # Runs a set of commands using the runners shell
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
