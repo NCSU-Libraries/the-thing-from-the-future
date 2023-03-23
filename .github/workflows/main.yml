@@ -30,7 +30,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git config pull.rebase false
-          git add data
+          git add src/data
           git commit -m "update data folder"
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
