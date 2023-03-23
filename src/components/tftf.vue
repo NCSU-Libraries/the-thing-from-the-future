@@ -86,7 +86,7 @@ export default {
       const urlDeck = urlParams.get('deck');
       var deck = urlDeck && Object.keys(all_decks).indexOf(urlDeck) > -1 ? urlDeck : 'all';
       console.log(deck)
-      this.msg = deck['title'].replaceAll('-', ' ')
+      this.msg = all_decks[deck]['title'] ? all_decks[deck]['title'].replaceAll('-', ' ') : '';
       vue.cards = all_decks[deck]['rows'];
         var objectcards = []
         var terraincards = []
