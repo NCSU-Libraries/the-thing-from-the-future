@@ -6,11 +6,21 @@ deckdata = {}
 for csvfile in glob.glob(os.path.join(datadir, '*.csv')):
 	csvReader = csv.DictReader(open(csvfile))
 	items = [row for row in csvReader]
-	print(os.path.basename(csvfile).replace('.csv', '').split('_'))
-	slugpagename = os.path.basename(csvfile).replace('.csv', '').split('_')
-	pagename = slugpagename[1] if len(slugpagename) == 2 else ''
-	deckdata[slugpagename[0]] = {'rows': items, 'title': pagename}
+	pageinfo = os.path.basename(csvfile).replace('.csv', '')
+	deckdata[pageinfo] = items
 
 jsonFilePath = os.path.join(datadir, 'all_decks.json')
 with open(jsonFilePath, 'w', encoding='utf-8') as jsonf:
 	jsonf.write(json.dumps(deckdata, indent=4))
+
+course_info_path = os.path.join(datadir, 'course_info.json')
+course_info = json.load(open(course_info_path))
+
+for slug in deckdata.keys():
+	print(course_info.keys())
+	if slug not in course_info.keys():
+		course_info[slug] = {"course_name": "",
+    	"courses": ""}
+
+with open(course_info_path, 'w') as f:
+	f.write(json.dumps(course_info, indent=4))

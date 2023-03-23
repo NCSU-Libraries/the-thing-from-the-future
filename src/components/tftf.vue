@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <div>
-    <h2 style="text-transform: capitalize;">{{ msg }}</h2>
+    <h2 style="text-transform: capitalize;" v-html="msg"></h2>
     <p>
       The Thing From the Future is an imagination game meant to spur creative and critical thinking.<br>
       To play the game, you draw a set of cards that prompt you to create an object from an alternative future.
@@ -59,6 +59,7 @@
 
 <script>
 import all_decks from '../data/all_decks.json';
+import course_info from '../data/course_info.json';
 export default {
   name: 'tftf',
   data() {
@@ -85,9 +86,8 @@ export default {
       const urlParams = new URLSearchParams(queryString);
       const urlDeck = urlParams.get('deck');
       var deck = urlDeck && Object.keys(all_decks).indexOf(urlDeck) > -1 ? urlDeck : 'all';
-      console.log(deck)
-      this.msg = all_decks[deck]['title'] ? all_decks[deck]['title'].replaceAll('-', ' ') : '';
-      vue.cards = all_decks[deck]['rows'];
+      this.msg = `<div class="course-code">${course_info[deck]['courses']}</div> <div class="class-name">${course_info[deck]['course_name']}</div>`
+      vue.cards = all_decks[deck];
         var objectcards = []
         var terraincards = []
         var arccards = []
