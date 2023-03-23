@@ -3,7 +3,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <div>
-    <h2 style="text-transform: capitalize;" v-html="msg"></h2>
+    <h2 v-if="course_name || course">
+      <div class="course-code" v-if="course">for {{course}}: </div>
+      <div class="course-name" v-if="course_name">{{course_name}}</div>
+    </h2>
     <p>
       The Thing From the Future is an imagination game meant to spur creative and critical thinking.<br>
       To play the game, you draw a set of cards that prompt you to create an object from an alternative future.
@@ -68,7 +71,8 @@ export default {
         objectcards: [],
         terraincards: [],
         current: {'arc': '', 'terrain': '', 'object': ''},
-        msg: "",
+        course: "",
+        course_name: "",
         card_decks: [ 
           {deck: "Arc", desc: "ARC outlines the type of future world that the “thing” comes from, and how far away it is from today."}, // There are four types of Arc, each an umbrella for countless possible scenarios: growth, collapse, discipline, transformation.
           {deck: "Object" , desc: "OBJECT is the focus for your imagination: a specific cultural artifact that reveals something about how this future is different from today."},
@@ -86,7 +90,14 @@ export default {
       const urlParams = new URLSearchParams(queryString);
       const urlDeck = urlParams.get('deck');
       var deck = urlDeck && Object.keys(all_decks).indexOf(urlDeck) > -1 ? urlDeck : 'all';
-      this.msg = `<div class="course-code">${course_info[deck]['courses']}</div> <div class="class-name">${course_info[deck]['course_name']}</div>`
+      console.log(deck)
+
+      if (course_info[deck]['courses']){
+        this.course = course_info[deck]['courses'];
+      }
+      if (course_info[deck]['course_name']) {
+        this.course_name = course_info[deck]['course_name'];
+      }
       vue.cards = all_decks[deck];
         var objectcards = []
         var terraincards = []
@@ -138,6 +149,14 @@ li {
 
 a {
  color: #004C9E;
+}
+
+.course-name {
+  font-style: italic;
+}
+
+.course-name, .course-code {
+  font-size: 1.5rem;
 }
 
 .btn-primary {
