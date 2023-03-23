@@ -30,6 +30,18 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git config pull.rebase false
+          git add data
+          git commit -m "update data folder"
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+      - name: commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git config pull.rebase false
           git --work-tree dist add --all
           git --work-tree dist commit -m "update gh-pages site"
       # Runs a set of commands using the runners shell
