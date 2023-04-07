@@ -20,7 +20,7 @@ for slug in deckdata.keys():
 	print(course_info.keys())
 	if slug not in course_info.keys():
 		course_info[slug] = {"course_name": "",
-    	"courses": ""}
+    	"courses": "", "form_link": ""}
 
 with open(course_info_path, 'w') as f:
 	f.write(json.dumps(course_info, indent=4))
