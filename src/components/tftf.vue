@@ -37,7 +37,7 @@
     <br>
     <h2><i> What is it? </i></h2>
     <p>
-      Use <a href="https://docs.google.com/presentation/d/1VoBZTmjG2UpjqwyJLg8GF4JeLEkhmag5Ru-uG4kXxes/copy">this template</a> to respond to the prompt. 
+      Use <a v-bind:href="form_link">this template</a> to respond to the prompt. 
       <br>
     </p>  
     <br/>
@@ -73,6 +73,7 @@ export default {
         current: {'arc': '', 'terrain': '', 'object': ''},
         course: "",
         course_name: "",
+        form_link: "https://docs.google.com/presentation/d/1VoBZTmjG2UpjqwyJLg8GF4JeLEkhmag5Ru-uG4kXxes/copy",
         card_decks: [ 
           {deck: "Arc", desc: "ARC outlines the type of future world that the “thing” comes from, and how far away it is from today."}, // There are four types of Arc, each an umbrella for countless possible scenarios: growth, collapse, discipline, transformation.
           {deck: "Object" , desc: "OBJECT is the focus for your imagination: a specific cultural artifact that reveals something about how this future is different from today."},
@@ -97,6 +98,9 @@ export default {
       }
       if (course_info[deck]['course_name']) {
         this.course_name = course_info[deck]['course_name'];
+      }
+      if (course_info[deck]['form_link']){
+        this.form_link = course_info[deck]['form_link'];
       }
       vue.cards = all_decks[deck];
         var objectcards = []
