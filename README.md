@@ -13,3 +13,11 @@ This version was used in the 2020 first-year and transfer student seminar ["Wick
 * [Advanced Graphic Design Stuido (GD 400)](https://ncsu-libraries.github.io/tftf-gd400/)
 * [Filming in a Time of Emergency: Socio-Environmental Crisis and Alternative Futures Through Film (ENG 492)](https://ncsu-libraries.github.io/tftf-ENG-492/)
 
+## Adding a new deck
+
+1. Create CSV that has decks in a format similar to this: https://github.com/NCSU-Libraries/the-thing-from-the-future/blob/main/src/data/all.csv
+2. **The name of the csv is going to become the URL slug, make sure there are no spaces/special characters other than `-`** 
+3. Upload CSV to the [data](https://github.com/NCSU-Libraries/the-thing-from-the-future/tree/main/src/data) folder (you should be able to drag and drop). 
+4. Wait a minute (this allows scripts to auto run and populate data). You should see a commit on the [home page](https://github.com/NCSU-Libraries/the-thing-from-the-future) when this is done saying "update data folder".
+5. Find the name of your csv in the [course_info file](https://github.com/NCSU-Libraries/the-thing-from-the-future/blob/main/src/data/course_info.json). Update with the correct form_link, course name and course. Save.
+6. Your new site should be avaliable at https://ncsu-libraries.github.io/the-thing-from-the-future/?deck=name-of-your-deck in a minute.
